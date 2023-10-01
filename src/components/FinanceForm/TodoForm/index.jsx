@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Inputs } from "../inputs";
 import { Select } from "../Select";
 import { InputValue } from "../InputValue";
-
+import styles from "./style.module.scss"
 export const TodoForm = ({addNote}) => {
     const [title, setTitle] = useState("")
     const [number, setNumber] = useState("")
@@ -20,7 +20,7 @@ const submit = (e) =>{
  
 
     return (
-        <div>
+        <div className={styles.formBox}>
             <form onSubmit={submit}>
                 <Inputs 
                 label="Descrição: " 
@@ -39,7 +39,7 @@ const submit = (e) =>{
                  <option value="Despesa">Despesa</option>
                  </Select>
 
-                <button type="submit">Inserir valor</button>         
+                <button type="submit" className="btn">Inserir valor</button>         
             </form>
         </div>
     )

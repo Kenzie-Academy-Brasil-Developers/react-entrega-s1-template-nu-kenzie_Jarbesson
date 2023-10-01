@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { TodoForm } from "../../components/FinanceForm/TodoForm"
 import { FinanceList } from "../../components/FinanceList"
+import { Header } from "../../components/Header"
+import styles from "./style.module.scss"
+import { NoteNumber } from "../../components/NoteNumber"
 
 export const HomePage = () => {
     const [listNotes, setListNotes] = useState([])
@@ -26,9 +29,14 @@ export const HomePage = () => {
 
     return (
         <>
-            <main>
-                <TodoForm addNote={addNote} />
-                <FinanceList listNotes={listNotes} removeNote={removeNote} />
+            <Header />
+            <main className={styles.container} >
+                <div className={styles.flexBox}>
+                    <TodoForm addNote={addNote} />
+                    <NoteNumber listNotes={listNotes}/>
+                    <FinanceList listNotes={listNotes} removeNote={removeNote} />
+                </div>
+
             </main>
         </>
     )

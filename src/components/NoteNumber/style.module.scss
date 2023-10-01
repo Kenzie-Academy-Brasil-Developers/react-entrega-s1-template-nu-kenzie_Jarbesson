@@ -1,0 +1,29 @@
+.valueBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 355px;
+    height: 96px;
+    gap: 10px;
+    margin-top: 2rem;
+    padding: 10px;
+
+    background: var(--Grey-1);
+    border: 1px solid var(--Grey-3);
+    
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: last baseline;
+
+        p {
+            font-family: var(--font-family);
+            color: var(--Color-primary);
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+}

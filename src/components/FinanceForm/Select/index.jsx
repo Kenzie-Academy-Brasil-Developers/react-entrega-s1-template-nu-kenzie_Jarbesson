@@ -1,6 +1,7 @@
+import styles from "./style.module.scss"
 export const Select = ({children, id, label, value, setValue, name}) =>{
     return(
-        <div>
+        <div className={styles.selectBox}> 
             <label htmlFor={id}>{label}</label>
             <select name={id}
              id={id}  

@@ -1,7 +1,8 @@
-export const Inputs = ({ label, type, id,name, placeholder, value, setValue}) => {
 
+import styles from "./style.module.scss"
+export const Inputs = ({ label, type, id,name, placeholder, value, setValue}) => {
     return (
-        <div>
+        <div className={styles.inputBox}>
             <label htmlFor={id}>{label}</label>
             <input  
             type={type} 

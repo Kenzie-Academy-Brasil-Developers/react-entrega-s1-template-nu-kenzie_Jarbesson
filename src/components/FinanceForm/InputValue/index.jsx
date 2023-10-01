@@ -1,6 +1,8 @@
+import styles from "./style.module.scss"
+
 export const InputValue = ({label,type,name, id, value, placeholder,setValue}) =>{
     return(
-        <div>
+        <div className={styles.inputBox}>
             <label htmlFor={id}>{label}</label>
             <input 
             type={type} 

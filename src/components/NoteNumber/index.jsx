@@ -1,5 +1,6 @@
+import styles from "./style.module.scss"
 export const NoteNumber = ({ listNotes }) => {
-console.log(listNotes, "Venum")
+
     const totalValue = listNotes?.reduce((prevValue, note) => {
         if (note.category === "Despesa") {
             return  prevValue - note.number;
@@ -10,13 +11,13 @@ console.log(listNotes, "Venum")
     }, 0)
 
     return (
-        <div>
+        <div className={styles.valueBox}>
             <div>
-                <p>Valor total:</p>
-                <p>{totalValue}</p>
+                <h3 className="title two">Valor total:</h3>
+                <p>{totalValue.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})} </p>
             </div>
 
-            <p>O valor se refere ao saldo</p>
+            <p className="body">O valor se refere ao saldo</p>
         </div>
     )
 }
