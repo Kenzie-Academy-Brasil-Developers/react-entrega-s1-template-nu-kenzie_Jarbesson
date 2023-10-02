@@ -1,7 +1,7 @@
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     padding: 1rem;
     margin-top: 1rem;
 
@@ -12,29 +12,24 @@
         flex-direction: row;
         gap: 70%;
 
-        h3{
-            margin-bottom: 30px;
+        h3 {
+            margin-bottom: 1.875rem;
         }
 
-        .divSecond{
-            margin-top: 20px;
+        .divSecond {
+            margin-top: 1.25rem;
         }
 
     }
-    
+
     button {
         width: 3.4375rem;
         height: 1.5625rem;
         margin-top: 0.625rem;
 
         border: none;
-        border-radius: 2px;
+        border-radius: 0.125rem;
         background: var(--Grey-2);
-
-        // @media (min-width:1024px) {
-        //     margin-top:1rem ;
-        // }
-
 
     }
 
