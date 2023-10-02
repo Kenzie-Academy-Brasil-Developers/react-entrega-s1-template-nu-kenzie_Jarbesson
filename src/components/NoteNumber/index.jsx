@@ -2,12 +2,13 @@ import styles from "./style.module.scss"
 export const NoteNumber = ({ listNotes }) => {
 
     const totalValue = listNotes?.reduce((prevValue, note) => {
+        const value = Number(note.number)
         if (note.category === "Despesa") {
-            return  prevValue - note.number;
+            return  prevValue - value;
             
             
         }
-        return prevValue + note.number;
+        return prevValue + value;
     }, 0)
 
     return (

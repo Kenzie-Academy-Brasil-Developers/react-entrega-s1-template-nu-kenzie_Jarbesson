@@ -5,6 +5,8 @@ import { Header } from "../../components/Header"
 import styles from "./style.module.scss"
 import { NoteNumber } from "../../components/NoteNumber"
 
+
+
 export const HomePage = () => {
     const [listNotes, setListNotes] = useState([])
 
@@ -32,8 +34,10 @@ export const HomePage = () => {
             <Header />
             <main className={styles.container} >
                 <div className={styles.flexBox}>
+                    <div>
                     <TodoForm addNote={addNote} />
-                    <NoteNumber listNotes={listNotes}/>
+                    <NoteNumber listNotes={listNotes} />
+                    </div>             
                     <FinanceList listNotes={listNotes} removeNote={removeNote} />
                 </div>
 

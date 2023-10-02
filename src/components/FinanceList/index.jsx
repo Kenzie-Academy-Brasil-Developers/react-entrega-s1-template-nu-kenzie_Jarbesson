@@ -13,6 +13,7 @@ export const FinanceList = ({ listNotes, removeNote }) => {
                         {listNotes.map((note) => {
                             const { title, number, id, category } = note;
                             return (
+                                
                                 <FinanceCard
                                     key={id}
                                     id={id}

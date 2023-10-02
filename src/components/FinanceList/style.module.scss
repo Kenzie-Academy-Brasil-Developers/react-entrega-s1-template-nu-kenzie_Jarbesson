@@ -1,7 +1,10 @@
-.listCards{
+.listCards {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
 
-    
+
+    @media (min-width:1024px) {
+        width: 50%;
+    }
 }
